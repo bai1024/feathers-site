@@ -204,8 +204,11 @@ header nav p{
   float:left;
 }
 
+.code {
+  display: flex;
+}
+
 .code > p{
-  float:right;
   font-size:100px;
   width: 70%;
   margin: auto;

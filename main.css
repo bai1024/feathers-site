@@ -170,6 +170,7 @@ header nav p{
 }
 
 .install{
+  padding: 20px;
   background: rgb(255,255,255);
   color: rgb(128,128,128);
   font-family: "Courier New";
@@ -177,46 +178,41 @@ header nav p{
   width: 50%;
   margin: auto;
   border-radius: 5px;
-  white-space: nowrap;
-  overflow: auto;
+  box-shadow: 0 2px 3px rgba(0,0,0,.3);
 }
 
-.install > p:last-child
-{
-  color:rgb(39,39,39);
+.bash1{
+  display: block;
+  overflow: auto;
+  white-space: nowrap;
 }
 
 .code{
-  width:50%;
+  width:52%;
   margin:auto;
   margin-top: 50px;
-}
-
-.nav{
-  color:rgb(255,255,255);
-  width:100px;
-  margin-right:0;
-  float: left;
-}
-
-.nav > p{
-  padding-bottom:50px;
-  float:left;
-}
-
-.code {
   display: flex;
+  justify-content: space-between;
 }
 
-.code > p{
-  font-size:100px;
-  width: 70%;
-  margin: auto;
-  margin-top:0px;
-  height: 600px;
-  background: rgb(255,255,255);
-  border-radius: 2px;
-  padding: 50px;
+.nav > h3 {
+  padding: 20px 10px;
+  color:rgb(255,255,255);
+  font-weight: 100;
+  font-size: 20px;
+  text-align: center;
+}
+
+.nav > h3:first-child{
+  background-color: #4FAA8A;
+  color: rgb(255,255,255);
+  border-radius: 5px;
+  height: 25px;
+  text-align: center;
+}
+
+#bash {
+  width: 80%;
 }
 
 #feathers{

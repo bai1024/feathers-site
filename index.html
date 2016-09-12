@@ -222,19 +222,225 @@
     </p>
 
     <div class="install">
+     <code class="bash1">
         <p># Install modular denpendencies</p>
         <p>$ npm install feathers feathers-hooks feathers-socketio feathers-rest feathers-errors feathers-memory feathers-authentication body-parser</p>
+    </code>
     </div>
 
     <div class="code">
       <div class="nav">
-        <p>SERVER</p>
-        <p>BROWSER</p>
-        <p>REACT NATIVE</p>
+        <h3>SERVER</h3>       
+        <h3>BROWSER</h3>
+        <h3>REACT NATIVE</h3>
       </div>
+    
+      <div id="bash">
+        <div class="col col-12 col-9-desktop">
+          <link rel="stylesheet" href="https://assets-cdn.github.com/assets/gist-embed-884f19b3583b1e92322e0e2db74f61434ccecbbef4b63a457e2127972ca01a01.css"><div id="gist32224436" class="gist">
+            <div class="gist-file">
+              <div class="gist-data">
+              <div class="js-gist-file-update-container js-task-list-container file-box">
+              <div id="file-server-js" class="file">
 
-      <p>code</p>
-     </div>
+
+             <div itemprop="text" class="blob-wrapper data type-javascript">
+             <table class="highlight tab-size js-file-line-container" data-tab-size="8">
+             <tbody><tr>
+             <td id="file-server-js-L1" class="blob-num js-line-number" data-line-number="1"></td>
+             <td id="file-server-js-LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-k">const</span> <span class="pl-c1">feathers</span> <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>feathers<span class="pl-pds">'</span></span>);</td>
+             </tr>
+             <tr>
+             <td id="file-server-js-L2" class="blob-num js-line-number" data-line-number="2"></td>
+             <td id="file-server-js-LC2" class="blob-code blob-code-inner js-file-line"><span class="pl-k">const</span> <span class="pl-c1">rest</span> <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>feathers-rest<span class="pl-pds">'</span></span>);</td>
+             </tr>
+             <tr>
+             <td id="file-server-js-L3" class="blob-num js-line-number" data-line-number="3"></td>
+             <td id="file-server-js-LC3" class="blob-code blob-code-inner js-file-line"><span class="pl-k">const</span> <span class="pl-c1">socketio</span> <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>feathers-socketio<span class="pl-pds">'</span></span>);</td>
+             </tr>
+             <tr>
+             <td id="file-server-js-L4" class="blob-num js-line-number" data-line-number="4"></td>
+             <td id="file-server-js-LC4" class="blob-code blob-code-inner js-file-line"><span class="pl-k">const</span> <span class="pl-c1">hooks</span> <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>feathers-hooks<span class="pl-pds">'</span></span>);</td>
+             </tr>
+             <tr>
+             <td id="file-server-js-L5" class="blob-num js-line-number" data-line-number="5"></td>
+             <td id="file-server-js-LC5" class="blob-code blob-code-inner js-file-line"><span class="pl-k">const</span> <span class="pl-c1">memory</span> <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>feathers-memory<span class="pl-pds">'</span></span>);</td>
+             </tr>
+             <tr>
+             <td id="file-server-js-L6" class="blob-num js-line-number" data-line-number="6"></td>
+             <td id="file-server-js-LC6" class="blob-code blob-code-inner js-file-line"><span class="pl-k">const</span> <span class="pl-c1">authentication</span> <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>feathers-authentication<span class="pl-pds">'</span></span>);</td>
+             </tr>
+             <tr>
+             <td id="file-server-js-L7" class="blob-num js-line-number" data-line-number="7"></td>
+             <td id="file-server-js-LC7" class="blob-code blob-code-inner js-file-line"><span class="pl-k">const</span> <span class="pl-c1">bodyParser</span> <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>body-parser<span class="pl-pds">'</span></span>);</td>
+             </tr>
+             <tr>
+             <td id="file-server-js-L8" class="blob-num js-line-number" data-line-number="8"></td>
+            <td id="file-server-js-LC8" class="blob-code blob-code-inner js-file-line"><span class="pl-k">const</span> <span class="pl-c1">handler</span> <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>feathers-errors/handler<span class="pl-pds">'</span></span>);</td>
+            </tr>
+            <tr>
+            <td id="file-server-js-L9" class="blob-num js-line-number" data-line-number="9"></td>
+            <td id="file-server-js-LC9" class="blob-code blob-code-inner js-file-line">
+             </td>
+             </tr>
+             <tr>
+             <td id="file-server-js-L10" class="blob-num js-line-number" data-line-number="10"></td>
+             <td id="file-server-js-LC10" class="blob-code blob-code-inner js-file-line"><span class="pl-c">// A Feathers app is the same as an Express app</span></td>
+             </tr>
+             <tr>
+             <td id="file-server-js-L11" class="blob-num js-line-number" data-line-number="11"></td>
+             <td id="file-server-js-LC11" class="blob-code blob-code-inner js-file-line"><span class="pl-k">const</span> <span class="pl-c1">app</span> <span class="pl-k">=</span> <span class="pl-en">feathers</span>();</td>
+             </tr>
+             <tr>
+             <td id="file-server-js-L12" class="blob-num js-line-number" data-line-number="12"></td>
+             <td id="file-server-js-LC12" class="blob-code blob-code-inner js-file-line">
+             </td>
+             </tr>
+             <tr>
+             <td id="file-server-js-L13" class="blob-num js-line-number" data-line-number="13"></td>
+             <td id="file-server-js-LC13" class="blob-code blob-code-inner js-file-line"><span class="pl-c">// Parse HTTP JSON bodies</span></td>
+             </tr>
+             <tr>
+             <td id="file-server-js-L14" class="blob-num js-line-number" data-line-number="14"></td>
+             <td id="file-server-js-LC14" class="blob-code blob-code-inner js-file-line"><span class="pl-smi">app</span>.<span class="pl-en">use</span>(<span class="pl-smi">bodyParser</span>.<span class="pl-en">json</span>());</td>
+             </tr>
+             <tr>
+             <td id="file-server-js-L15" class="blob-num js-line-number" data-line-number="15"></td>
+             <td id="file-server-js-LC15" class="blob-code blob-code-inner js-file-line"><span class="pl-c">// Parse URL-encoded params</span></td>
+             </tr>
+             <tr>
+             <td id="file-server-js-L16" class="blob-num js-line-number" data-line-number="16"></td>
+             <td id="file-server-js-LC16" class="blob-code blob-code-inner js-file-line"><span class="pl-smi">app</span>.<span class="pl-en">use</span>(<span class="pl-smi">bodyParser</span>.<span class="pl-en">urlencoded</span>({ extended<span class="pl-k">:</span> <span class="pl-c1">true</span> }));</td>
+             </tr>
+             <tr>
+             <td id="file-server-js-L17" class="blob-num js-line-number" data-line-number="17">
+             </td>
+             <td id="file-server-js-LC17" class="blob-code blob-code-inner js-file-line"><span class="pl-c">// Register hooks module</span></td>
+             </tr>
+             <tr>
+             <td id="file-server-js-L18" class="blob-num js-line-number" data-line-number="18"></td>
+             <td id="file-server-js-LC18" class="blob-code blob-code-inner js-file-line"><span class="pl-smi">app</span>.<span class="pl-en">configure</span>(<span class="pl-en">hooks</span>());</td>
+             </tr>
+             <tr>
+             <td id="file-server-js-L19" class="blob-num js-line-number" data-line-number="19"></td>
+             <td id="file-server-js-LC19" class="blob-code blob-code-inner js-file-line"><span class="pl-c">// Add REST API support</span></td>
+             </tr>
+             <tr>
+             <td id="file-server-js-L20" class="blob-num js-line-number" data-line-number="20"></td>
+             <td id="file-server-js-LC20" class="blob-code blob-code-inner js-file-line"><span class="pl-smi">app</span>.<span class="pl-en">configure</span>(<span class="pl-en">rest</span>());</td>
+             </tr>
+             <tr>
+             <td id="file-server-js-L21" class="blob-num js-line-number" data-line-number="21"></td>
+             <td id="file-server-js-LC21" class="blob-code blob-code-inner js-file-line"><span class="pl-c">// Configure Socket.io real-time APIs</span></td>
+             </tr>
+             <tr>
+             <td id="file-server-js-L22" class="blob-num js-line-number" data-line-number="22"></td>
+             <td id="file-server-js-LC22" class="blob-code blob-code-inner js-file-line"><span class="pl-smi">app</span>.<span class="pl-en">configure</span>(<span class="pl-en">socketio</span>());</td>
+             </tr>
+             <tr>
+             <td id="file-server-js-L23" class="blob-num js-line-number" data-line-number="23"></td>
+             <td id="file-server-js-LC23" class="blob-code blob-code-inner js-file-line"><span class="pl-c">// Register our authentication plugin</span></td>
+             </tr>
+             <tr>
+             <td id="file-server-js-L24" class="blob-num js-line-number" data-line-number="24"></td>
+             <td id="file-server-js-LC24" class="blob-code blob-code-inner js-file-line"><span class="pl-smi">app</span>.<span class="pl-en">configure</span>(<span class="pl-en">authentication</span>({ idField<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>id<span class="pl-pds">'</span></span> }));</td>
+             </tr>
+             <tr>
+             <td id="file-server-js-L25" class="blob-num js-line-number" data-line-number="25"></td>
+             <td id="file-server-js-LC25" class="blob-code blob-code-inner js-file-line"><span class="pl-c">// Register our memory "users" service</span></td>
+             </tr>
+             <tr>
+             <td id="file-server-js-L26" class="blob-num js-line-number" data-line-number="26"></td>
+             <td id="file-server-js-LC26" class="blob-code blob-code-inner js-file-line"><span class="pl-smi">app</span>.<span class="pl-en">use</span>(<span class="pl-s"><span class="pl-pds">'</span>/users<span class="pl-pds">'</span></span>, <span class="pl-en">memory</span>());</td>
+             </tr>
+             <tr>
+             <td id="file-server-js-L27" class="blob-num js-line-number" data-line-number="27"></td>
+             <td id="file-server-js-LC27" class="blob-code blob-code-inner js-file-line"><span class="pl-c">// Register a nicer error handler than the default Express one</span></td>
+             </tr>
+             <tr>
+             <td id="file-server-js-L28" class="blob-num js-line-number" data-line-number="28"></td>
+             <td id="file-server-js-LC28" class="blob-code blob-code-inner js-file-line"><span class="pl-smi">app</span>.<span class="pl-en">use</span>(<span class="pl-en">handler</span>());</td>
+             </tr>
+             <tr>
+             <td id="file-server-js-L29" class="blob-num js-line-number" data-line-number="29"></td>
+             <td id="file-server-js-LC29" class="blob-code blob-code-inner js-file-line">
+             </td>
+             </tr>
+             <tr>
+             <td id="file-server-js-L30" class="blob-num js-line-number" data-line-number="30"></td>
+             <td id="file-server-js-LC30" class="blob-code blob-code-inner js-file-line"><span class="pl-c">// Register a before hook to hash passwords</span></td>
+             </tr>
+             <tr>
+             <td id="file-server-js-L31" class="blob-num js-line-number" data-line-number="31"></td>
+             <td id="file-server-js-LC31" class="blob-code blob-code-inner js-file-line"><span class="pl-smi">app</span>.<span class="pl-en">service</span>(<span class="pl-s"><span class="pl-pds">'</span>users<span class="pl-pds">'</span></span>).<span class="pl-en">before</span>({</td>
+             </tr>
+             <tr>
+             <td id="file-server-js-L32" class="blob-num js-line-number" data-line-number="32"></td>
+             <td id="file-server-js-LC32" class="blob-code blob-code-inner js-file-line">  create<span class="pl-k">:</span> <span class="pl-smi">authentication</span>.<span class="pl-smi">hooks</span>.<span class="pl-en">hashPassword</span>()</td>
+             </tr>
+             <tr>
+             <td id="file-server-js-L33" class="blob-num js-line-number" data-line-number="33"></td>
+             <td id="file-server-js-LC33" class="blob-code blob-code-inner js-file-line">});</td>
+             </tr>
+             <tr>
+             <td id="file-server-js-L34" class="blob-num js-line-number" data-line-number="34"></td>
+             <td id="file-server-js-LC34" class="blob-code blob-code-inner js-file-line">
+             </td>
+             </tr>
+             <tr>
+             <td id="file-server-js-L35" class="blob-num js-line-number" data-line-number="35"></td>
+             <td id="file-server-js-LC35" class="blob-code blob-code-inner js-file-line"><span class="pl-c">// Create a test user</span></td>
+             </tr>
+             <tr>
+             <td id="file-server-js-L36" class="blob-num js-line-number" data-line-number="36"></td>
+             <td id="file-server-js-LC36" class="blob-code blob-code-inner js-file-line"><span class="pl-smi">app</span>.<span class="pl-en">service</span>(<span class="pl-s"><span class="pl-pds">'</span>users<span class="pl-pds">'</span></span>).<span class="pl-en">create</span>({</td>
+             </tr>
+             <tr>
+             <td id="file-server-js-L37" class="blob-num js-line-number" data-line-number="37"></td>
+             <td id="file-server-js-LC37" class="blob-code blob-code-inner js-file-line">  email<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>admin@feathersjs.com<span class="pl-pds">'</span></span>,</td>
+             </tr>
+             <tr>
+             <td id="file-server-js-L38" class="blob-num js-line-number" data-line-number="38"></td>
+             <td id="file-server-js-LC38" class="blob-code blob-code-inner js-file-line">  password<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>admin<span class="pl-pds">'</span></span></td>
+             </tr>
+             <tr>
+             <td id="file-server-js-L39" class="blob-num js-line-number" data-line-number="39"></td>
+             <td id="file-server-js-LC39" class="blob-code blob-code-inner js-file-line">});</td>
+             </tr>
+             <tr>
+             <td id="file-server-js-L40" class="blob-num js-line-number" data-line-number="40"></td>
+             <td id="file-server-js-LC40" class="blob-code blob-code-inner js-file-line">
+             </td>
+             </tr>
+             <tr>
+             <td id="file-server-js-L41" class="blob-num js-line-number" data-line-number="41"></td>
+             <td id="file-server-js-LC41" class="blob-code blob-code-inner js-file-line"><span class="pl-c">// Start the server</span></td>
+             </tr>
+             <tr>
+             <td id="file-server-js-L42" class="blob-num js-line-number" data-line-number="42"></td>
+             <td id="file-server-js-LC42" class="blob-code blob-code-inner js-file-line"><span class="pl-smi">app</span>.<span class="pl-en">listen</span>(<span class="pl-c1">3030</span>);
+             </td>
+             </tr>
+             </tbody>
+             </table>
+             </div>
+             </div>
+             </div>
+             </div>
+             </div>
+             </div>
+          </div>
+        </div>  
+
+
+
+
+
+      
+    </div>
+
+
+
       <div id="clear-float">
       </div>
   </div>

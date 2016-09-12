@@ -285,35 +285,37 @@ header nav p{
 }
 
 .font{
-  display:inline-block;
-  width: 800px;
+  display:flex;
+  width: 50%;
   margin: auto;
+  justify-content: space-between;
   padding-top:50px;
   text-align: left;
 }
+
 .footer{
   background:rgb(62,65,64);
   margin:auto;
   color:rgb(150,156,154);
   padding-bottom:100px ;
   font-family: "Helvetica Neue";
-  font-size:16px;
+  font-size: 1rem;
   font-weight: 300;
 }
 
-.font  h1{ 
-  color:rgb(108,176,144);
+.more-message  h1{ 
+  color: #6cb090;
   font-family:"Helvetica Neue";
+  font-weight: 400;
   font-size:16px;
   font-weight:normal;
   padding-top: 20px;
 } 
 
-
 #about{
   padding-right:15px;
   padding-left:15px;
-  width:138px;
+  width:120px;
   margin:0px;
   display:inline-block;
   vertical-align: top;
@@ -322,7 +324,7 @@ header nav p{
 #learn{
   padding-right:15px;
   padding-left:15px;
-  width:138px;
+  width:120px;
   margin:0px;
   display:inline-block;
   vertical-align: top;
@@ -332,7 +334,7 @@ header nav p{
 #support{
   padding-right:15px;
   padding-left:15px;
-  width:138px;
+  width:120px;
   display:inline-block;
   vertical-align: top;
 }
@@ -341,6 +343,7 @@ header nav p{
   padding-top: 30px;
   font-size: 40px;
   display:inline-block;
+  margin-right: 10%;
 }
  
 .copy img{
